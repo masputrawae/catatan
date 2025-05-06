@@ -1,0 +1,10 @@
+{{ define "main" }}
+  {{ .Content }}
+  
+  {{ partial "components/content-pagination" . }}
+  <nav class="navbar navbar--pagination">
+    <ul class="nav nav--row">
+      {{ template "partials/inline/pagination/default" . }}
+    </ul>
+  </nav>
+{{ end }}

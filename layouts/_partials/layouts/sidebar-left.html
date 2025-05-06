@@ -1,0 +1,18 @@
+<figure class="brand">
+  <picture class="brand__picture">
+    <img src="{{ site.Params.logo | default "https://placehold.co/100" | relURL }}" alt="{{ site.Title }}" class="brand__image">
+    <span class="emoji brand__emoji">{{ site.Params.emoji }}</span>
+  </picture>
+  <figcaption class="brand__title">{{ site.Title }}</figcaption>
+
+  <div class="button-wrapper">
+    <button class="btn btn--emoji btn--theme" id="switchThemes" aria-label="Switch Themes">
+      <span class="emoji">☀️</span>
+    </button>
+    <button class="btn btn--emoji" data-sidebar="sidebarLeft" aria-label="Toggle Sidebar Left">
+      <span class="emoji btn__emoji">🧭</span>
+    </button>
+  </div>
+</figure>
+
+{{ partial "components/menu.html" (dict "menuID" "main" "page" .) }}

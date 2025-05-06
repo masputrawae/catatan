@@ -1,0 +1,4 @@
+<h{{ .Level }} id="{{ .Anchor }}" {{- with .Attributes.class }} class="heading {{ . }}" {{- else }} class="heading" {{- end }}>
+  {{ .Text }}
+  <a href="#{{ .Anchor }}" class="emoji heading__anchor">🔗</a>
+</h{{ .Level }}>
