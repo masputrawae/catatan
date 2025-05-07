@@ -8,6 +8,7 @@ tags:
 categories:
   - Matematika
   - Rumus
+mathjax: true
 ---
 
 $$

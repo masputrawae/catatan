@@ -1,6 +1,7 @@
 @use "../abstracts/dark-theme" as dark;
 @use "../abstracts/light-theme" as light;
 @use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
 
 :root {
 	@include m.theme-vars(light.$light);
@@ -48,4 +49,16 @@ button {
 
 article, aside, details, figcaption, figure, footer, header, main, menu, nav, section {
   display: block;
+}
+
+// EMOJI STYLE
+.emoji {
+  display: inline-block;
+  font-family: v.$font__family--emoji;
+  font-size: inherit;
+  text-shadow: var(--text-shadow);
+
+  &--xs {
+    font-size: v.$font__size--xs;
+  }
 }

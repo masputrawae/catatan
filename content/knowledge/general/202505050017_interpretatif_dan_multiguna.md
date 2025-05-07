@@ -6,6 +6,7 @@ tags:
 categories:
   - Istilah
   - Pemrograman
+image: "https://placehold.co/480x270"
 ---
 Saat membaca artikel tentang [Python](../python/_index.md) di situs [Belajar Python](https://belajarpython.com/tutorial/apa-itu-python/), aku menemukan istilah **interpretatif dan multiguna**. Karena penasaran, aku pun langsung mencari tahu maknanya.
 

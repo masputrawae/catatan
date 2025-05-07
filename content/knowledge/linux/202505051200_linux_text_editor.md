@@ -9,7 +9,6 @@ tags:
 categories:
   - Linux
   - Pemrograman
-image: "https://placehold.co/1080x512"
 ---
 
 Text editor di Linux yang paling populer adalah **Vim** atau **Vi** (Vi sebenarnya merupakan versi ringan dari Vim yang menjadi bawaan di banyak sistem Linux). Menggunakan Vim memang agak sulit di awal, tetapi tetap bisa dipelajari. Sebagai alternatif, ada **Nano**, yang lebih mudah digunakan. Namun, Nano tidak secanggih dan sefleksibel Vim. Meski begitu, Nano sudah cukup untuk kebutuhan mengetik ringan sehari-hari.

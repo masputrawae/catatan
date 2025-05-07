@@ -24,39 +24,6 @@ enableEmoji       = true
   logo          = "logo/logo.png"
   image         = "logo/logo.png"
   twitter       = "@Masputrawae"
-  emoji         = "😎"
-  toc           = true
-
-[menus]
-  [[menus.main]]
-    name = 'Home'
-    pageRef = '/'
-    weight = 10
-    params = {emoji = "🏠"}
-
-  [[menus.main]]
-    name = 'Books'
-    pageRef = '/books'
-    weight = 20
-    params = {emoji = "📚"}
-
-  [[menus.main]]
-    name = 'Garden'
-    pageRef = '/garden'
-    weight = 30
-    params = {emoji = "🌱"}
-
-  [[menus.main]]
-    name = 'Tags'
-    pageRef = '/tags'
-    weight = 40
-    params = {emoji = "🏷️"}
-
-  [[menus.main]]
-    name = 'Categories'
-    pageRef = '/categories'
-    weight = 50
-    params = {emoji = "🗂️"}
 
 #============== MARKUP ==============#
 [markup]
@@ -89,50 +56,50 @@ enableEmoji       = true
         title = true
 
 #============== OUTPUT ==============#
-# [outputFormats]
+[outputFormats]
 
-#   [outputFormats.search-data]
-#     mediaType       = "application/json"
-#     baseName        = "search-data"
-#     isPlainText     = true
-#     notAlternative  = true
+  [outputFormats.search-data]
+    mediaType       = "application/json"
+    baseName        = "search-data"
+    isPlainText     = true
+    notAlternative  = true
   
-#   [outputFormats.search]
-#     mediaType       = "text/html"
-#     baseName        = "search"
-#     isPlainText     = true
-#     notAlternative  = true
+  [outputFormats.search]
+    mediaType       = "text/html"
+    baseName        = "search"
+    isPlainText     = true
+    notAlternative  = true
     
-#   [outputFormats.manifest]
-#     mediaType       = "application/json"
-#     baseName        = "manifest"
-#     isPlainText     = true
-#     notAlternative  = true
+  [outputFormats.manifest]
+    mediaType       = "application/json"
+    baseName        = "manifest"
+    isPlainText     = true
+    notAlternative  = true
   
-#   [outputFormats.news]
-#     mediaType       = "application/json"
-#     baseName        = "news"
-#     isPlainText     = true
-#     notAlternative  = true
+  [outputFormats.news]
+    mediaType       = "application/json"
+    baseName        = "news"
+    isPlainText     = true
+    notAlternative  = true
 
-#   [outputFormats.sw]
-#     mediaType       = "text/javascript"
-#     baseName        = "sw"
-#     isPlainText     = true
-#     notAlternative  = true
+  [outputFormats.sw]
+    mediaType       = "text/javascript"
+    baseName        = "sw"
+    isPlainText     = true
+    notAlternative  = true
 
-#   [outputFormats.Robots]
-#     mediaType = "text/plain"
-#     baseName = "robots"
-#     isPlainText = true
-#     notAlternative = true
+  [outputFormats.Robots]
+    mediaType = "text/plain"
+    baseName = "robots"
+    isPlainText = true
+    notAlternative = true
 
-# [outputs]
-#   home = ['html', "search-data", "search", "manifest", 'news', 'sw', "Robots"]
-#   page = ['html']
-#   section = ['html']
-#   taxonomy = ['html']
-#   term = ['html']
+[outputs]
+  home = ['html', "search-data", "search", "manifest", 'news', 'sw', "Robots"]
+  page = ['html']
+  section = ['html']
+  taxonomy = ['html']
+  term = ['html']
 
 [pagination]
   disableAliases = false

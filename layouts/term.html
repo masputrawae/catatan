@@ -1,11 +1,35 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
+  <article>
+    <h1>{{ .Title }}</h1>
+  </article>
   
-  {{ partial "components/content-pagination" . }}
-  <nav class="navbar navbar--pagination">
-    <ul class="nav nav--row">
-      {{ template "partials/inline/pagination/default" . }}
-    </ul>
-  </nav>
+  <div class="masonry">
+    {{ range shuffle .Pages }}
+      <article class="masonry__item card">
+        <section class="card__body">
+          {{ $title := .Title }}
+          {{ with .Params.image }}
+            <img src="{{ . | absURL }}" alt="{{ $title }}" class="card__image">
+          {{ end }}
+          <a href="{{ .RelPermalink }}" class="card__title">
+            <span class="emoji">{{ with .Params.emoji }}{{ . }}{{ else }}🗒️{{ end }}</span>
+            <span>{{ .Title }}</span>
+          </a>
+          {{ with .Params.description }}
+            <p>{{ . }}</p>
+          {{ else }}
+            <p>{{ .Summary | truncate 80 }}</p>
+          {{ end }}
+          <div class="card__meta">
+            {{ if .Params.categories }}
+              <strong>
+                <span>{{ index .Params.categories 0 | title }}: </span>
+              </strong>
+            {{ end }}
+            {{ partial "components/timeago.html" . }}
+          </div>
+        </section>
+      </article>
+    {{ end }}
+  </div>
 {{ end }}

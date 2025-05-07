@@ -10,7 +10,6 @@ tags:
   - linux
 categories:
   - Questions and Answers
-image: "https://placehold.co/1080x512"
 ---
 
 **Shell** adalah antarmuka baris perintah (command-line interface) yang memungkinkan pengguna berinteraksi dengan sistem operasi. Shell bertugas menerima perintah dari pengguna dan mengeksekusinya.

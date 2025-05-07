@@ -1,5 +1,5 @@
 ---
-title: Php My Admin
+title: 
 date: 2025-05-05T00:24:14+07:00
 tags:
   - inbox

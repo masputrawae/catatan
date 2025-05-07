@@ -1,9 +1,19 @@
-<button class="btn btn--emoji" data-sidebar="sidebarLeft" aria-label="Toggle Sidebar Left">
-  <span class="emoji btn__emoji">🧭</span>
+<button class="btn btn--emoji" id="toggleThemes" aria-label="Switch Themes">
+  <span class="emoji">☀️</span>
 </button>
 
-<a href="{{ site.BaseURL | absURL }}" class="header__title"><span class="emoji">🏡</span>{{ site.Title }}</a>
+<a href="{{ "/tags/"| relURL }}" class="btn btn--emoji" aria-label="Tags">
+  <span class="emoji">🏷️</span>
+</a>
 
-<button class="btn btn--emoji" data-sidebar="sidebarRight" aria-label="Toggle Sidebar Right">
-  <span class="emoji btn__emoji">📖</span>
-</button>
+<a href="{{ site.BaseURL | absURL }}" class="btn btn--emoji" aria-label="{{ .Title }}">
+  <span class="emoji">🏡</span>
+</a>
+
+<a href="{{ "/categories/" | relURL }}" class="btn btn--emoji" aria-label="Categories">
+  <span class="emoji">📂</span>
+</a>
+
+<a href="{{ "search.html" | relURL }}" class="btn btn--emoji" aria-label="Search">
+  <span class="emoji">🔍</span>
+</a>

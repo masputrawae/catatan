@@ -74,8 +74,7 @@ p + p {
   font-weight: 800;
 }
 
-// LINKS
-a {
+.link {
   color: var(--cl-accent);
   text-decoration: none;
   font-weight: 500;
@@ -86,9 +85,7 @@ a {
   &:hover {
     color: var(--cl-accent-hover);
   }
-}
-
-.link {
+  
   &--external {
     color: var(--cl-link-external);
 
@@ -132,4 +129,13 @@ li + li {
 
 li > p {
   margin-top: 1rem;
+}
+
+// HR
+hr {
+  border: 0;
+  height: 3px;
+  max-width: 100%;
+  background-color: var(--cl-border-default);
+  margin: 20px 0;
 }

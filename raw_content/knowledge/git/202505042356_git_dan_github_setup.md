@@ -8,6 +8,7 @@ tags:
   - instalasi
 categories:
   - Git
+image: "https://placehold.co/480x270"
 ---
 - Doa sebelum memulai
 - Desktop (Aku pakai Ubuntu)

@@ -2,10 +2,19 @@
 @use "../abstracts/mixins" as m;
 @use "../abstracts/variables" as v;
 
-.btn {
+// BUTTON
+button, .btn {
+  @include m.flex-center;
+  padding: 0.75rem;
+  background-color: var(--bg-second);
+  color: inherit;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-sm);
 
-  &--emoji {
+  .emoji {
     @include m.flex-center;
-    font-size: v.$font__size--10xl;
+    font-size: v.$font__size--2xl;
+    @include m.width-height(25px, 25px);
   }
 }

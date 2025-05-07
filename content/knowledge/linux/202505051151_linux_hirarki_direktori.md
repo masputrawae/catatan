@@ -5,7 +5,6 @@ tags:
   - linux
 categories:
   - Linux
-  - Cheat Sheet
 ---
 
 | Direktori | Fungsi Utama                                                                          |

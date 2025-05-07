@@ -1,7 +1,103 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-  {{ end }}
+  <article>
+    <h1>{{ .Title }}</h1>
+  </article>
+
+  {{ $taxonomy := .Data.Plural }}
+  {{ $terms := index .Site.Taxonomies $taxonomy }}
+  {{ $max := math.Max (len $terms) 1 }}
+
+  <nav class="taxonomy">
+    {{ range $term, $pages := $terms }}
+      {{ $size := div (len $pages) $max | mul 1 | add 1 }}
+      {{ $count := len $pages }}
+
+      {{/* Banyak level emoji berdasarkan jumlah halaman */}}
+      {{ $emoji := "🌑" }}
+      {{ if lt $count 3 }}
+        {{ $emoji = "🌱" }}
+      {{ else if lt $count 5 }}
+        {{ $emoji = "🍃" }}
+      {{ else if lt $count 8 }}
+        {{ $emoji = "🌿" }}
+      {{ else if lt $count 10 }}
+        {{ $emoji = "🍀" }}
+      {{ else if lt $count 12 }}
+        {{ $emoji = "🌵" }}
+      {{ else if lt $count 14 }}
+        {{ $emoji = "🌴" }}
+      {{ else if lt $count 16 }}
+        {{ $emoji = "🌳" }}
+      {{ else if lt $count 18 }}
+        {{ $emoji = "🎋" }}
+      {{ else if lt $count 20 }}
+        {{ $emoji = "🎄" }}
+      {{ else if lt $count 22 }}
+        {{ $emoji = "🏡" }}
+      {{ else if lt $count 25 }}
+        {{ $emoji = "🏘️" }}
+      {{ else if lt $count 28 }}
+        {{ $emoji = "🏢" }}
+      {{ else if lt $count 30 }}
+        {{ $emoji = "🏬" }}
+      {{ else if lt $count 35 }}
+        {{ $emoji = "🏯" }}
+      {{ else if lt $count 40 }}
+        {{ $emoji = "🏛️" }}
+      {{ else if lt $count 45 }}
+        {{ $emoji = "🗼" }}
+      {{ else if lt $count 50 }}
+        {{ $emoji = "🗽" }}
+      {{ else }}
+        {{ $emoji = "🏰" }}
+      {{ end }}
+
+      <a href="{{ .Page.RelPermalink }}" class="btn" style="font-size: {{ $size }}em;">
+        <span class="emoji">{{ $emoji }}</span>
+        <span>{{ .Page.Name }} ({{ $count }})</span>
+      </a>
+    {{ end }}
+  </nav>
+
+
+  <style>
+    nav.taxonomy {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    nav.taxonomy .btn {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      background-color: inherit;
+      border-radius: 0.75rem;
+      box-shadow: var(--shadow-sm);
+      text-decoration: none;
+      color: inherit;
+      border: 2px solid transparent;
+    }
+
+    /* Emoji dan nama taksonomi */
+    nav.taxonomy .btn .emoji {
+      margin-right: 0.5rem;
+      font-size: 1.5em;
+    }
+
+    /* Hover effect */
+    nav.taxonomy .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--cl-accent);
+    }
+
+    /* Responsive font-size based on $size */
+    nav.taxonomy .btn span:last-child {
+      font-weight: 600;
+    }
+  </style>
 {{ end }}

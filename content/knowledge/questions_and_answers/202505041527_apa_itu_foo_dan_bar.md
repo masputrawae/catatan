@@ -8,7 +8,6 @@ tags:
   - foobar
 categories:
   - Questions and Answers
-image: "https://placehold.co/1080x512"
 ---
 **Foo** dan **bar** (atau istilah serupa) biasanya ditemukan dalam contoh kode pemrograman. Istilah-istilah ini tidak memiliki makna khusus dan hanya digunakan sebagai *placeholder*—yakni nama sementara untuk variabel, fungsi, atau elemen lain dalam kode.
 

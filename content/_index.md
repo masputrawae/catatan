@@ -22,11 +22,3 @@ Ruang pembelajaran ini aku susun untuk mengorganisasi apa pun yang sedang aku pe
 Topiknya beragam — mulai dari dunia pemrograman seperti JavaScript dan Python, hingga catatan acak lintas disiplin serta jejak langkahku dalam proses belajar. Catatan teknis dan pemrograman sebagian besar menggunakan _Linux_.
 
 ---
-
-### Kategori dan Navigasi
-
-- [Inbox](inbox/_index.md): Tempat untuk mencatat ide atau informasi yang baru saja masuk.
-- [Ide](ideas/_index.md): Kumpulan ide-ide mentah yang belum dikembangkan lebih lanjut.
-- [Knowledge](knowledge/_index.md): Kumpulan pengetahuan terorganisir, topik yang sedang dipelajari.
-- [Projects](projects/_index.md): Daftar proyek yang sedang berjalan atau yang ingin dikerjakan.
-- [Archives](archives/_index.md): Tempat untuk menyimpan catatan yang sudah selesai atau tidak aktif lagi.
