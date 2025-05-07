@@ -1,0 +1,42 @@
+<select id="filterCategory">
+  <option value="all">Semua Kategori</option>
+  {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+    <option value="{{ $name | urlize | md5 }}">{{ $name | title }}</option>
+  {{ end }}
+</select>
+
+<div id="postList">
+  {{ range .Site.RegularPages }}
+    <figure class="card post-item" data-categories="{{ range .Params.categories }}{{ . | urlize | md5 }} {{ end }}">
+      {{ with .Params.image }}
+        <img src="{{ . | absURL }}" alt="{{ $.Title }}" loading="lazy" class="card__image">
+      {{ end }}
+      <figcaption class="card__body">
+        <strong class="card__title">
+          {{ with .Params.emoji }}<span class="emoji">{{ . }}</span>{{ end }}
+          <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        </strong>
+        {{ .Summary | strings.Truncate 80 }}
+      </figcaption>
+    </figure>
+  {{ end }}
+</div>
+
+<script defer>
+  const select = document.getElementById('filterCategory');
+  const posts = document.querySelectorAll('.post-item');
+
+  select.addEventListener('change', function () {
+    const selected = this.value;
+
+    posts.forEach(post => {
+      const categories = post.getAttribute('data-categories').split(' ');
+
+      if (selected === 'all' || categories.includes(selected)) {
+        post.style.display = '';
+      } else {
+        post.style.display = 'none';
+      }
+    });
+  });
+</script>

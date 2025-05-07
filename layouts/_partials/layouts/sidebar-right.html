@@ -1,5 +1,5 @@
 <div class="sidebar__header">
-  <button class="btn btn--emoji" data-sidebar="sidebarLeft" aria-label="Toggle Sidebar Left">
+  <button class="btn btn--emoji" data-sidebar="sidebarRight" aria-label="Toggle Sidebar Right">
     <span class="emoji btn__emoji">🧭</span>
   </button>
 
@@ -19,14 +19,13 @@
 
 <nav class="navbar">
   {{ if or .IsHome .IsSection }}
-    {{ partial "components/pinned.html" . }}
-    {{ partial "components/recent-post.html" . }}
+    {{ partial "components/widget.html" . }}
   {{ else }}
     {{ if or (.Params.toc) (and (not (isset .Params "toc")) site.Params.toc) }}
-      <div class="navbar__label">
+      <strong class="navbar__label">
         <span class="emoji">📖</span>
         <span>Daftar Isi</span>
-      </div>
+      </strong>
       {{ $toc := .TableOfContents }}
       {{ $toc := replaceRE `<ul>` `<ul class="toc">` $toc }}
       {{ $toc := replaceRE `<li>` `<li class="toc__item">` $toc }}

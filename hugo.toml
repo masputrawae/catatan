@@ -12,6 +12,11 @@ enableEmoji       = true
     disable = false
     respectDoNotTrack = false
 
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  stage = "stage"
+  
 [params]
   author        = "Putra Jaya"
   description   = "catatan-catatan pribadi yang mungkin hanya berguna untuk saya sendiri (atau mungkin alien di masa depan, siapa tahu? 👽)."

@@ -21,9 +21,6 @@ Ruang pembelajaran ini aku susun untuk mengorganisasi apa pun yang sedang aku pe
 
 Topiknya beragam — mulai dari dunia pemrograman seperti JavaScript dan Python, hingga catatan acak lintas disiplin serta jejak langkahku dalam proses belajar. Catatan teknis dan pemrograman sebagian besar menggunakan _Linux_.
 
-[![roadmap.sh](https://roadmap.sh/card/tall/680607c2d7a904b5ef3e9412?variant=dark)](https://roadmap.sh)
-![https://placehold.co/50](https://placehold.co/50)
-![Title Here](https://placehold.co/50)
 ---
 
 ### Kategori dan Navigasi
