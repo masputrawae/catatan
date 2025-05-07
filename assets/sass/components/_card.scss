@@ -1,0 +1,36 @@
+@use "../abstracts/breakpoints" as b;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+.card {
+  padding: 1rem;
+  margin: 0.25rem;
+  border-radius: 0.25rem;
+  box-shadow: var(--shadow-md);
+  font-size: 80%;
+  overflow: hidden;
+  @include m.transition(transform, box-shadow);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  &__body,
+  &__image {
+    margin-block: 1rem;
+  }
+
+  &__image {
+    aspect-ratio: 1.91 / 1;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0.25rem;
+  }
+
+  &__title {
+    font-size: v.$font__size--lg;
+    font-weight: 700;
+  }
+}

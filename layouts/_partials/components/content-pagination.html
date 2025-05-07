@@ -1,14 +1,14 @@
 {{ range .Paginator.Pages }}
   <figure class="card">
     {{ with .Params.image }}
-      <img src="{{ .Params.image | absURL }}" alt="{{ .Title }}" loading="lazy" class="card__image">
+      <img src="{{ . | absURL }}" alt="{{ $.Title }}" loading="lazy" class="card__image">
     {{ end }}
-    <figcaption class="card__content">
-      <strong class="card__title">
+    <figcaption class="card__body">
+      <strong>
         {{ with .Params.emoji }}<span class="emoji">{{ . }}</span>{{ end }}
-        <span>{{ .Title }}</span>
+        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
       </strong>
-      <p>{{ .Summary | strings.Truncate 200 }}</p>
+      {{ .Summary | strings.Truncate 80 }}
     </figcaption>
   </figure>
 {{ end }}

@@ -1,0 +1,11 @@
+@use "../abstracts/breakpoints" as b;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+.btn {
+
+  &--emoji {
+    @include m.flex-center;
+    font-size: v.$font__size--10xl;
+  }
+}

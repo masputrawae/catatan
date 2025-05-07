@@ -1,0 +1,35 @@
+@use "../abstracts/breakpoints" as b;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+.brand {
+  position: relative;
+
+  &__image {
+    @include m.width-height(200px, 200px);
+    border: 4px solid var(--cl-border-default);
+    border-radius: 50%;
+  }
+
+  &__title {
+    font-family: v.$font__family--serif;
+    font-size: v.$font__size--10xl;
+  }
+
+  &__caption {
+    font-family: v.$font__family--serif;
+    font-style: normal;
+  }
+
+  &__wrapper {
+    @include m.flex-between;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.btn[data-sidebar="sidebarLeft"]{
+  display: none;
+}

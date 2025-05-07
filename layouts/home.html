@@ -1,10 +1,22 @@
 {{ define "main" }}
+<h1>{{ .Title }}</h1>
   {{ .Content }}
   
-  {{ partial "components/content-pagination" . }}
-  <nav class="navbar navbar--pagination">
-    <ul class="nav nav--row">
-      {{ template "partials/inline/pagination/default" . }}
-    </ul>
-  </nav>
+  <hr>
+  <div style="column-count: 2; padding-block: 1rem; margin-block: 1rem;">
+    {{ range .Site.RegularPages }}
+      <figure class="card" style="margin-block: 1.5rem; break-inside: avoid;">
+        {{ with .Params.image }}
+          <img src="{{ . | absURL }}" alt="{{ $.Title }}" loading="lazy" class="card__image">
+        {{ end }}
+        <figcaption class="card__body">
+          <strong class="card__title">
+            {{ with .Params.emoji }}<span class="emoji">{{ . }}</span>{{ end }}
+            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+          </strong>
+          {{ .Summary | strings.Truncate 80 }}
+        </figcaption>
+      </figure>
+    {{ end }}
+  </div>
 {{ end }}

@@ -1,50 +1,11 @@
-@use "./abstracts/dark-theme" as dark;
-@use "./abstracts/light-theme" as light;
-@use "./abstracts/mixins" as m;
+@use './base/root';
+@use './base/typography';
+@use './base/layout';
 
-:root {
-	@include m.theme-vars(light.$light);
-
-	&[data-theme="dark"] {
-		@include m.theme-vars(dark.$dark);
-	}
-}
-
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-
-main {
-	display: block;
-	padding: 0;
-	margin: 0;
-}
-
-a {
-	background-color: transparent;
-}
-
-small {
-	font-size: 80%;
-}
-
-:is(sub, sup) {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
-}
-
-sub {
-	bottom: -0.25em;
-}
-
-sup {
-	top: -0.5em;
-}
-
-img {
-	border-style: none;
-} 
+@use './components/blockquote';
+@use './components/brand';
+@use './components/button';
+@use './components/card';
+@use './components/code';
+@use './components/image';
+@use './components/navbar';

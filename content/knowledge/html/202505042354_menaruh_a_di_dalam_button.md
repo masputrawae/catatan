@@ -7,6 +7,8 @@ tags:
   - link
 categories:
   - HTML
+pinned: true
+image: "https://placehold.co/1080x1080"
 ---
 
 aku bertanya tentang bagaimana jika menggunakan `<a>` di dalam elemen `button` _apakah bisa dilakukan?_, _apakah ini umum?_

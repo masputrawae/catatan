@@ -1,15 +1,19 @@
 {{ $recent := .Site.RegularPages }}
 {{ if $recent }}
-  <strong class="navbar__label">
-    <span class="emoji">⏰</span>
-    <span>Terbaru</span>
-  </strong>
-
-  <ul class="nav nav--widget">
-    {{ range $recent | first 5 }}
-      <li class="nav__item">
-        <a href="{{ .RelPermalink }}" class="nav__link">{{ .Title }}</a>
-      </li>
+  <div class="nav nav--widget">
+    {{ range $recent | first 10 }}
+      <figure class="card">
+        {{ with .Params.image }}
+          <img src="{{ . | absURL }}" alt="{{ $.Title }}" loading="lazy" class="card__image">
+        {{ end }}
+        <figcaption class="card__body">
+          <strong class="card__title">
+            {{ with .Params.emoji }}<span class="emoji">{{ . }}</span>{{ end }}
+            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+          </strong>
+          {{ .Summary | strings.Truncate 80 }}
+        </figcaption>
+      </figure>
     {{ end }}
-  </ul>
+  </div>
 {{ end }}

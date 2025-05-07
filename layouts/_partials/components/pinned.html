@@ -1,15 +1,19 @@
 {{ $pinned := where .Site.RegularPages "Params.pinned" true }}
 {{ if $pinned }}
-<strong class="navbar__label">
-  <span class="emoji">📌</span>
-  <span>Disematkan</span>
-</strong>
-
-<ul class="nav nav--widget">
-  {{ range $pinned | first 5 }}
-    <li class="nav__item">
-      <a href="{{ .RelPermalink }}" class="nav__link">{{ .Title }}</a>
-    </li>
-  {{ end }}
-</ul>
+  <div class="nav nav--widget">
+    {{ range $pinned | first 10 }}
+      <figure class="card">
+        {{ with .Params.image }}
+          <img src="{{ . | absURL }}" alt="{{ $.Title }}" loading="lazy" class="card__image">
+        {{ end }}
+        <figcaption class="card__body">
+          <strong class="card__title">
+            {{ with .Params.emoji }}<span class="emoji">{{ . }}</span>{{ end }}
+            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+          </strong>
+          {{ .Summary | strings.Truncate 80 }}
+        </figcaption>
+      </figure>
+    {{ end }}
+  </div>
 {{ end }}

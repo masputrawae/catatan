@@ -19,7 +19,7 @@ enableEmoji       = true
   logo          = "logo/logo.png"
   image         = "logo/logo.png"
   twitter       = "@Masputrawae"
-  emoji         = "👻"
+  emoji         = "😎"
   toc           = true
 
 [menus]
@@ -131,7 +131,7 @@ enableEmoji       = true
 
 [pagination]
   disableAliases = false
-  pagerSize = 2
+  pagerSize = 20
 
 [module]
   [module.hugoVersion]
