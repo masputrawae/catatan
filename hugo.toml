@@ -25,6 +25,19 @@ enableEmoji       = true
   image         = "logo/logo.png"
   twitter       = "@Masputrawae"
 
+  [[params.bookSections]]
+    id    = "knowledge"
+    title = "Knowledge"
+  [[params.bookSections]]
+    id    = "books"
+    title = "Books"
+  [[params.bookSections]]
+    id    = "archives"
+    title = "Archives"
+  [[params.bookSections]]
+    id    = "garden"
+    title = "Garden"
+
 #============== MARKUP ==============#
 [markup]
   [markup.tableOfContents]

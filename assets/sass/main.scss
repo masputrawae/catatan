@@ -2,10 +2,12 @@
 @use './base/typography';
 @use './base/layout';
 
-@use './components/blockquote';
+// @use './components/blockquote';
+@use './components/book';
 @use './components/button';
 @use './components/card';
-@use './components/code';
-@use './components/image';
-@use './components/navbar';
-@use './components/search';
+// @use './components/code';
+// @use './components/image';
+// @use './components/navbar';
+// @use './components/search';
+@use './components/sticky-notes';

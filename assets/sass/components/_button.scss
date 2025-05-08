@@ -3,18 +3,42 @@
 @use "../abstracts/variables" as v;
 
 // BUTTON
-button, .btn {
+.btn {
   @include m.flex-center;
-  padding: 0.75rem;
-  background-color: var(--bg-second);
+  @include m.transition(color);
+  gap: 0.5rem;
+  position: relative;
+  padding: 0.25rem 0.75rem;
   color: inherit;
-  border: none;
-  border-radius: 0.5rem;
-  box-shadow: var(--shadow-sm);
 
-  .emoji {
-    @include m.flex-center;
-    font-size: v.$font__size--2xl;
-    @include m.width-height(25px, 25px);
+  font-weight: 600;
+  font-size: v.$font__size--2xl;
+  font-family: v.$font__family--serif;
+  text-shadow: var(--text-shadow);
+
+  @include b.min(lg){
+    &::after {
+      content: "";
+      @include m.transition(width);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background-color: var(--cl-accent);
+      border-radius: 5rem;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    &:hover {
+      color: var(--cl-accent);
+  
+      &::after {
+        width: 100%;
+      }
+      .emoji {
+        transform: rotate(720deg);
+      }
+    }
   }
 }

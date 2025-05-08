@@ -12,6 +12,7 @@ tags:
   - karier
   - refleksi
 stage: budding
+state: todo
 ---
 
 Dari sebuah cerita klasik, yang sering diceritakan dulu waktu masih kanak-kanak, tentang bagaimana seekor kura-kura bisa mengalahkan kelinci dalam perlombaan lari. 

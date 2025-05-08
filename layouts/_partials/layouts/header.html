@@ -1,19 +1,31 @@
-<button class="btn btn--emoji" id="toggleThemes" aria-label="Switch Themes">
-  <span class="emoji">☀️</span>
-</button>
-
-<a href="{{ "/tags/"| relURL }}" class="btn btn--emoji" aria-label="Tags">
-  <span class="emoji">🏷️</span>
+<a href="{{ site.BaseURL | absURL }}" class="btn site-title">
+  <span class="emoji">📚</span>
+  {{ site.Title }}
 </a>
 
-<a href="{{ site.BaseURL | absURL }}" class="btn btn--emoji" aria-label="{{ .Title }}">
-  <span class="emoji">🏡</span>
-</a>
+<nav>
+  <a href="{{ site.BaseURL | absURL }}" aria-label="{{ .Title }}" class="btn">
+    <span class="emoji">🏡</span>
+    <span>Home</span>
+  </a>
+  
+  <a href="{{ "/tags/"| relURL }}" aria-label="Tags" class="btn">
+    <span class="emoji">🏷️</span>
+    <span>Tags</span>
+  </a>
+  
+  <a href="{{ "/categories/" | relURL }}" aria-label="Categories" class="btn">
+    <span class="emoji">📂</span>
+    <span>Categories</span>
+  </a>
 
-<a href="{{ "/categories/" | relURL }}" class="btn btn--emoji" aria-label="Categories">
-  <span class="emoji">📂</span>
-</a>
+  <a href="{{ "search.html" | relURL }}" aria-label="Search" class="btn btn--search">
+    <span class="emoji">🔍</span>
+    <span>Search</span>
+  </a>
 
-<a href="{{ "search.html" | relURL }}" class="btn btn--emoji" aria-label="Search">
-  <span class="emoji">🔍</span>
-</a>
+  <button id="toggleThemes" aria-label="Switch Themes" class="btn">
+    <span class="emoji">☀️</span>
+    <span>Themes</span>
+  </button>
+</nav>

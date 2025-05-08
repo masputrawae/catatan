@@ -7,6 +7,7 @@ tags:
 categories:
   - JavaScript
   - Pemrograman
+emoji: ⏰
 ---
 
 JavaScript adalah bahasa pemrograman yang sering digunakan untuk membangun aplikasi web, terutama di sisi front end. Namun, JavaScript juga dapat digunakan di sisi backend melalui platform seperti Node.js. Bahasa ini merupakan salah satu yang paling populer di kalangan pengembang web, dan biasanya digunakan bersama dengan HTML dan CSS.

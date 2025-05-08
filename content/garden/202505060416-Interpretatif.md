@@ -11,7 +11,7 @@ tags:
   - istilah
   - interpretatif
 stage: seedling
-emoji: 😅
+state: "info"
 ---
 
 Istilah **Interpretatif** khususnya pada bahasa pemrograman merujuk pada jenis bahasa yang kode sumbernya dapat dijalankan langsung oleh interpreter, tanpa perlu melalui proses kompilasi penuh ke dalam bahasa mesin terlebih dahulu.

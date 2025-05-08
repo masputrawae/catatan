@@ -6,6 +6,7 @@ tags:
   - version_control
 categories:
   - Git
+image: "https://picsum.photos/400/600"
 ---
 Tempat menyimpan Catatan terkait dengan Git
 

@@ -11,6 +11,7 @@ tags:
   - jual_beli
   - dagang
 stage: seedling
+state: "danger"
 ---
 
 Sempat terlintas di pikiran mengenai pembelian sebuah software atau perangkat lunak. 

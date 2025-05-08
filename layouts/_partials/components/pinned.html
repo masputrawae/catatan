@@ -1,0 +1,32 @@
+{{ range site.RegularPages }}
+  {{ if .Params.pinned }}
+    {{ $key := .Params.state | default "note" }}
+
+    {{/* Cek apakah key ada di $noteMaps, kalau tidak pakai default emoji */}}
+    {{ $icon := "🗒️" }}
+      {{ if eq $key "tip" }}        {{ $icon = "💡" }}
+      {{ else if eq $key "info" }}  {{ $icon = "ℹ️" }}
+      {{ else if eq $key "success" }}{{ $icon = "✅" }}
+      {{ else if eq $key "warning" }}{{ $icon = "⚠️" }}
+      {{ else if eq $key "danger" }}{{ $icon = "❌" }}
+      {{ else if eq $key "note" }}  {{ $icon = "📝" }}
+      {{ else if eq $key "abstract" }}{{ $icon = "⚙️" }}
+      {{ else if eq $key "todo" }}  {{ $icon = "☑️" }}
+      {{ else if eq $key "question" }}{{ $icon = "❓" }}
+      {{ else if eq $key "important" }}{{ $icon = "‼️" }}
+    {{ end }}
+
+    <div class="masonry__item notes" style="background-color: var(--bg-state-{{- $key -}}); border-color: var(--cl-state-{{- $key -}});">
+      <a href="{{ .RelPermalink }}">
+        <strong class="notes__title heading heading--4" style="color: var(--cl-state-{{- $key -}});">
+          <span class="emoji">{{ with .Params.emoji }}{{ . }}{{ else }}{{ $icon }}{{ end }}</span>
+          {{ .Title }}
+        </strong>
+        <div class="markdown notes__body">
+          {{ .Content | safeHTML }}
+          <strong>{{ partial "components/timeago.html" . }}</strong>
+        </div>
+      </a>
+    </div>
+  {{ end }}
+{{ end }}

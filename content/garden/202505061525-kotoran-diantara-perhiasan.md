@@ -9,6 +9,7 @@ tags:
   - perasaan
   - renungan
 stage: seedling
+state: "abstract"
 ---
 
 Sering kali aku merasa menjadi sosok yang paling tidak berguna dalam keluarga. 🤔  

@@ -57,8 +57,9 @@ article, aside, details, figcaption, figure, footer, header, main, menu, nav, se
   font-family: v.$font__family--emoji;
   font-size: inherit;
   text-shadow: var(--text-shadow);
+  @include m.transition(transform);
 
-  &--xs {
-    font-size: v.$font__size--xs;
+  &:hover {
+    transform: rotate(720deg);
   }
 }

@@ -12,6 +12,8 @@ tags:
   - linux
   - cli
 stage: seedling
+state: "success"
+pinned: true
 ---
 
 **Shell** adalah antarmuka baris perintah (command-line interface) yang memungkinkan pengguna berinteraksi dengan sistem operasi. Shell bertugas menerima perintah dari pengguna dan mengeksekusinya.

@@ -6,6 +6,7 @@ tags:
   - markup
 categories:
   - HTML
+emoji: 👻
 ---
 
 Tempat catatan terkait dengan html

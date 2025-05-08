@@ -7,6 +7,7 @@ tags:
   - umum
 categories:
   - General
+image: "https://picsum.photos/400/600"
 ---
 
 Beberapa catatan dengan topik umum yang pastinya aku malas mengelompokkanya 😅

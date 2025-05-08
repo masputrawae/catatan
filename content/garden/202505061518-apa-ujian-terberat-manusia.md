@@ -10,6 +10,8 @@ tags:
   - manusia
   - renungan
 stage: seedling
+state: "note"
+pinned: true
 ---
 
 🤔 Apa sebenarnya ujian terberat bagi manusia? Apakah kehilangan sesuatu yang berharga, tidak mendapatkan apa yang diinginkan, kehilangan pekerjaan, kegagalan dalam mencapai tujuan, atau hal-hal umum lainnya yang sering disebut sebagai ujian hidup?

@@ -12,6 +12,7 @@ tags:
   - linux
   - cli
 stage: sprout
+state: "warning"
 ---
 
 Bash banyak digunakan di server karena stabil, ringan, dan sangat kompatibel dengan banyak skrip sistem. Sedangkan shell lain seperti `zsh` lebih populer di sisi pengguna desktop karena fitur tambahan seperti tema, plugin, dan auto-suggestion.
